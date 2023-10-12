@@ -14,13 +14,12 @@ const workoutRoutes = require('./routes/workouts')
 
 // create a express app using express function
 const app = express()
-app.use(cors(
-   {
-      origin: ["https://fitness-buddy-kappa.vercel.app"],
-      methods: ["POST", "GET"],
-      credentials: true
-   }
-   ));
+app.use(cors());
+
+// Allow specific origin(s)
+app.use(cors({
+  origin: 'https://fitness-buddy-kappa.vercel.app'
+}));
 
 //creating middleware
 app.use(express.json())
