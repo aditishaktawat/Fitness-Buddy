@@ -6,6 +6,7 @@
 
 require('dotenv').config()
 
+const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
@@ -13,6 +14,13 @@ const workoutRoutes = require('./routes/workouts')
 
 // create a express app using express function
 const app = express()
+app.use(cors(
+   {
+      origin: ["https://fitness-buddy-kappa.vercel.app"],
+      methods: ["POST", "GET"],
+      credentials: true
+   }
+   ));
 
 //creating middleware
 app.use(express.json())
