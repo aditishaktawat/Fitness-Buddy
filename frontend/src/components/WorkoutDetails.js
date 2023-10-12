@@ -7,7 +7,7 @@ const WorkoutDetails = ({workout }) => {
   const {dispatch} = useWorkoutsContext()
 
   const handleClick = async () => {
-    const response = await fetch('/api/workouts/' + workout._id, {
+    const response = await fetch('https://vercel.com/aditis-projects-0bcee96b/fitness-buddy-backend/45igsdyDNosUWQX8gi7DzC8VKZgY/api/workouts/' + workout._id, {
       method: 'DELETE'
     })
     const json = await response.json()
