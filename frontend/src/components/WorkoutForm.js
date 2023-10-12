@@ -15,7 +15,7 @@ const WorkoutForm = () => {
 
         const workout = {title, load, reps}
 
-        const response = await fetch('https://vercel.com/aditis-projects-0bcee96b/fitness-buddy-backend/45igsdyDNosUWQX8gi7DzC8VKZgY/api/workouts', {
+        const response = await fetch('https://fitness-buddy-backend.vercel.app/api/workouts', {
             method: 'POST',
             body: JSON.stringify(workout),
             headers: {
