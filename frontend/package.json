@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:4000",
+  "proxy": "https://vercel.com/aditis-projects-0bcee96b/fitness-buddy-backend/EV1jbvTJD95GHJqrM988paWVuGHc",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
