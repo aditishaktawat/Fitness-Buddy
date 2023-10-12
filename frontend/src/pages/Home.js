@@ -11,7 +11,7 @@ const Home = () => {
 // usefeect hook will fire a function when the component is rendered
    useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('/api/workouts')
+      const response = await fetch('https://vercel.com/aditis-projects-0bcee96b/fitness-buddy-backend/EBfvE9LRaZt8TVF1JPMHdgPyxPrG/api/workouts')
       const json = await response.json()
 
       if (response.ok){
