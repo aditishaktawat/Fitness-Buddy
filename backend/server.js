@@ -16,7 +16,7 @@ const app = express()
 
 app.use(cors({
   origin: ["https://fitness-buddy-kappa.vercel.app"],
-  methods: ["POST" , "GET"],
+  methods: ["POST" , "GET", "PUT", "HEAD", "PATCH", "DELETE"],
   credentials: true
 }));
 
@@ -35,9 +35,9 @@ app.use('/api/workouts',workoutRoutes)
 mongoose.connect(process.env.MONGO_URI)
  .then(() => {
     // listen for requests with specific port number
-    app.listen(process.env.PORT, () =>{
-        console.log('Connected to db and Listening on port' , process.env.PORT)
-    })
+    const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`))
+
  })
  .catch((error) => {
     console.log(error)
