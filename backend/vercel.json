@@ -2,11 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "*server.js",
+      "src": "server.js", // Specify the correct entry point of your backend
       "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/api/.*", // Define a route to match all API endpoints
+      "dest": "server.js" // Point to the entry point of your backend
+    },
     {
       "src": "/(.*)",
       "dest": "/"
