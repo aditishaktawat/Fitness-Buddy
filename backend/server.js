@@ -32,9 +32,13 @@ app.use((req, res, next) => {
 app.use('/api/workouts',workoutRoutes)
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI) {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true, 
+})
+ 
  .then(() => {
-    // listen for requests with specific port number
+    
     const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`))
 
