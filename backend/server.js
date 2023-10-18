@@ -16,7 +16,7 @@ const app = express()
 
 app.use(cors({
   origin: ["https://fitness-buddy-kappa.vercel.app"],
-  methods: ["POST" , "GET", "PUT", "HEAD", "PATCH", "DELETE"],
+  methods: ["POST" , "GET", "PATCH", "DELETE"],
   credentials: true
 }));
 
