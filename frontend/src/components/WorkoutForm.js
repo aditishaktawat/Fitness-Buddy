@@ -17,7 +17,7 @@ const WorkoutForm = () => {
 
 try{
         
-        const response = await fetch('https://fitness-buddy-backend.vercel.app//api/workouts', {
+        const response = await fetch('https://fitness-buddy-backend.vercel.app/api/workouts', {
             method: 'POST',
             body: JSON.stringify(workout),
             headers: {
@@ -38,6 +38,7 @@ try{
             setEmptyFields([])
             console.log('new workout added', json)
             dispatch({type: 'CREATE_WORKOUT', payload: json})
+        }
         }  catch (error) {
             console.error('Network error:', error);
         }
