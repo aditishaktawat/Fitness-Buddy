@@ -12,19 +12,19 @@ const router = express.Router()
 
 //attach handler to this
 // get all workouts
-router.get('/api/workouts', getWorkouts)
+router.get('/', getWorkouts)
 
 // get a single workouts
-router.get('/api/workouts/:id', getWorkout)
+router.get('/:id', getWorkout)
 
 // post a new workout
-router.post('/api/workouts', createWorkout)
+router.post('/', createWorkout)
 
 // delete a workout
-router.delete('/api/workouts/:id', deleteWorkout)
+router.delete('/:id', deleteWorkout)
 
 // UPDATE a workout
-router.patch('/api/workouts/:id', updateWorkout)
+router.patch('/:id', updateWorkout)
 
 
 // ??export router 
